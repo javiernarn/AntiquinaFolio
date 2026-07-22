@@ -1,19 +1,19 @@
 export const timeline = [
   {
-    date: '2023 — Present',
+    date: '2025 — Present',
     title: 'Lead Developer · ATMS (alumni.occph.com)',
-    desc: 'Designed and built the Alumni Tracing Management System using Laravel, Laravel Mix and MySQL — managing data through phpMyAdmin.',
+    desc: 'Designed and developed the Alumni Tracing Management System using Laravel, Laravel Mix, MySQL, and phpMyAdmin. Implemented authentication, alumni management, surveys, reports, and deployment.',
   },
   {
-    date: '2021 — 2023',
-    title: 'Programmer & Developer · Freelance',
-    desc: 'Built Laravel-based web platforms and admin dashboards for local clients in the Philippines.',
+    date: '2023 — 2024',
+    title: 'Learning Laravel Development',
+    desc: 'Started learning Laravel in college through hands-on projects. Built CRUD applications, authentication systems, and gained experience with MVC architecture, database design, and RESTful development.',
   },
-  {
-    date: '2019 — 2021',
-    title: 'Frontend Developer',
-    desc: 'Delivered responsive websites with a focus on performance, accessibility, and design quality.',
-  },
+ {
+  date: '2018 — 2019',
+  title: 'Frontend Development Beginner Journey',
+  desc: 'Started learning HTML and CSS by recreating the Acme website design as a beginner. Practiced building page layouts, styling, and responsive web design to develop fundamental frontend development skills.',
+},
 ];
 
 export const education = [

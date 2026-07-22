@@ -3,7 +3,7 @@ export const testimonials = [
     avatar: 'SA',
     quote:
       'Jonee delivered the ATMS beyond our expectations. The platform is fast, reliable, and easy to maintain.',
-    name: 'Alumni Office',
+    name: 'Alumni Association ',
     role: 'OCC',
   },
   {
@@ -16,7 +16,7 @@ export const testimonials = [
   {
     avatar: 'LC',
     quote: 'He turned our vision into a polished system faster than expected.',
-    name: 'Faculty',
+    name: 'Project Member',
     role: 'OCC',
   },
 ];

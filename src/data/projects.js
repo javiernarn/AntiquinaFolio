@@ -1,5 +1,18 @@
 export const projects = [
   {
+    id: 3,
+    title: 'OCC Duty Log — OJT Tracker',
+    cat: 'web',
+    desc: 'Real-time OJT duty log and hours tracker for Opol Community College trainees — sign in with Google, log daily time-in/out, and keep every entry saved securely on-device.',
+    tech: ['REACT', 'VITE', 'PWA', 'GOOGLE AUTH', 'JAVASCRIPT'],
+    github: '#',
+    live: 'https://antiquina-ota-dxxj.vercel.app',
+    img: {
+      light: '/images/ojt-duty-log.png',
+      dark: '/images/ojt-duty-log.png',
+    },
+  },
+  {
     id: 1,
     title: 'Alumni Tracing Management System',
     cat: 'web',
