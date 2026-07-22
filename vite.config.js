@@ -12,8 +12,8 @@ export default defineConfig({
         name: 'Jonee John Rivera Antiquina — Portfolio',
         short_name: 'Jonee.dev',
         description: 'Programmer, designer and developer portfolio — Laravel, MySQL, and modern frontends.',
-        theme_color: '#6366f1',
-        background_color: '#0a0a0f',
+        theme_color: '#070713',
+        background_color: '#070713',
         display: 'standalone',
         start_url: '/',
         icons: [

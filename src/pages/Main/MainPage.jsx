@@ -8,6 +8,7 @@ import Modal from '../../components/Modal/Modal';
 import Footer from '../../components/Footer/Footer';
 import { useScrollState } from '../../hooks/useScrollState';
 import { useSectionSync } from '../../hooks/useSectionSync';
+import { usePageTitle } from '../../hooks/usePageTitle';
 
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -32,6 +33,10 @@ export default function MainPage() {
   // Scrolls to whatever section the current URL points to
   // (handles first load, hard refresh on a deep link, and back/forward nav)
   useSectionSync();
+
+  // Keeps the browser tab title in sync with the section in view,
+  // e.g. "Home | JJRA - Portfolio", "Projects | JJRA - Portfolio".
+  usePageTitle(activeSection);
 
   return (
     <>
