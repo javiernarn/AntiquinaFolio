@@ -1,19 +1,68 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useReveal } from '../../../hooks/useReveal';
 import { projects } from '../../../data/projects';
 import { useDataTheme } from '../../../hooks/useDataTheme';
 
 const FILTERS = ['all', 'web', 'app', 'ai', 'ui'];
 
+const STATUS_LABEL = {
+  local: 'Local',
+  checking: 'Checking',
+  online: 'Online',
+  offline: 'Offline',
+};
+
+// Pings a project's live domain and reports whether it's reachable.
+// No live domain -> "local". Domain set but unreachable -> "offline". Reachable -> "online".
+function useLiveStatus(url) {
+  const hasLive = !!url && url !== '#';
+  const [status, setStatus] = useState(hasLive ? 'checking' : 'local');
+
+  useEffect(() => {
+    if (!hasLive) {
+      setStatus('local');
+      return;
+    }
+
+    let cancelled = false;
+    setStatus('checking');
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 6000);
+
+    fetch(url, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
+      .then(() => {
+        if (!cancelled) setStatus('online');
+      })
+      .catch(() => {
+        if (!cancelled) setStatus('offline');
+      })
+      .finally(() => clearTimeout(timeoutId));
+
+    return () => {
+      cancelled = true;
+      controller.abort();
+      clearTimeout(timeoutId);
+    };
+  }, [url, hasLive]);
+
+  return status;
+}
+
 function ProjectCard({ project, onDetails }) {
   const [ref, revealed] = useReveal();
   const theme = useDataTheme();
   const src = project.img?.[theme] || project.img?.dark;
+  const status = useLiveStatus(project.live);
 
   return (
     <article className={`project reveal${revealed ? ' in' : ''}`} ref={ref} data-cat={project.cat}>
       <div className="project-img">
         {src && <img src={src} alt={`${project.title} preview`} />}
+        <span className={`status-badge status-${status}`}>
+          <span className="status-dot" />
+          {STATUS_LABEL[status]}
+        </span>
       </div>
       <div className="project-body">
         <h3>{project.title}</h3>
