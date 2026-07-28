@@ -80,6 +80,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="ci-socials">
+              <a href="https://github.com/javiernarn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
               <a href="https://www.facebook.com/EphemeralKun/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
               <a href="mailto:occ.antiquina.joneejohn@gmail.com" aria-label="Email">EM</a>
             </div>

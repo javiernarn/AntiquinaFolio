@@ -2,34 +2,35 @@ export const skillGroups = [
   {
     title: 'Frontend',
     items: [
-      { label: 'HTML / CSS', pct: 88 },
-      { label: 'JavaScript', pct: 99 },
-      { label: 'Blade / Laravel Mix', pct: 99 },
-      { label: 'Bootstrap / Tailwind', pct: 3 },
+      { label: 'HTML / CSS', pct: 95 },
+      { label: 'JavaScript', pct: 93 },
+      { label: 'React / Vite', pct: 88 },
+      { label: 'Blade Templating', pct: 85 },
     ],
   },
   {
     title: 'Backend',
     items: [
-      { label: 'PHP', pct: 93 },
-      { label: 'Laravel', pct: 89 },
-      { label: 'REST APIs', pct: 85 },
-      { label: 'Node.js', pct: 94 },
+      { label: 'PHP', pct: 90 },
+      { label: 'Laravel', pct: 87 },
+      { label: 'REST APIs / Google Auth', pct: 82 },
+      { label: 'Node.js', pct: 60 },
     ],
   },
   {
     title: 'Database',
     items: [
-      { label: 'MySQL', pct: 97 },
-      { label: 'phpMyAdmin', pct: 97 },
-      { label: 'Eloquent ORM', pct: 1 },
+      { label: 'MySQL', pct: 92 },
+      { label: 'phpMyAdmin', pct: 90 },
+      { label: 'Eloquent ORM', pct: 80 },
     ],
   },
   {
     title: 'Tools',
     items: [
-      { label: 'Git / GitHub', pct: 80 },
-      { label: 'Composer / NPM', pct: 90 },
+      { label: 'Git / GitHub', pct: 88 },
+      { label: 'Vercel Deployment', pct: 90 },
+      { label: 'PWA / Service Workers', pct: 80 },
       { label: 'VS Code', pct: 100 },
     ],
   },
@@ -37,7 +38,7 @@ export const skillGroups = [
 
 export const stats = [
   { count: 1, label: 'Years Experience' },
-  { count: 2, label: 'Projects Completed' },
-  { count: 5, label: 'Technologies' },
-  { count: 7, label: 'Happy Clients' },
+  { count: 7, label: 'Projects Completed' },
+  { count: 12, label: 'Technologies' },
+  { count: 5, label: 'Happy Clients' },
 ];

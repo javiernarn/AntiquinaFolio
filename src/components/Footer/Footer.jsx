@@ -24,6 +24,7 @@ export default function Footer() {
         <div>
           <h4>Connect</h4>
           <ul>
+            <li><a href="https://github.com/javiernarn" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://www.facebook.com/EphemeralKun/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
             <li><a href="https://alumni.occph.com" target="_blank" rel="noopener noreferrer">ATMS System</a></li>
             <li><a href="mailto:occ.antiquina.joneejohn@gmail.com">Email</a></li>

@@ -5,7 +5,7 @@ export const projects = [
     cat: 'web',
     desc: 'Real-time OJT duty log and hours tracker for Opol Community College trainees — sign in with Google, log daily time-in/out, and keep every entry saved securely on-device.',
     tech: ['REACT', 'VITE', 'PWA', 'GOOGLE AUTH', 'JAVASCRIPT'],
-    github: '#',
+    github: 'https://github.com/javiernarn/AntiquinaOTA',
     live: 'https://antiquina-ota-dxxj.vercel.app',
     img: {
       light: '/images/ojt-duty-log.png',
@@ -32,7 +32,7 @@ export const projects = [
     desc: 'High-end personal portfolio built with React and Vite, featuring a light/dark theme, smooth reveal animations, and a project showcase.',
     tech: ['REACT', 'HTML', 'CSS', 'JS', 'JSX', 'VITE'],
     github: 'https://github.com/javiernarn/AntiquinaFolio',
-    live: '#',
+    live: 'https://antiquina-ota-dxxj.vercel.app',
     img: {
       light: '/images/portfolio-light.png',
       dark: '/images/portfolio-dark.png',
