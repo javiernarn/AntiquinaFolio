@@ -37,8 +37,8 @@ export default function About() {
             <p>
               I'm Jonee John Rivera Antiquina (JJRA), a programmer, designer and developer
               (frontend and backend) based in Cagayan de Oro City, Philippines. I specialize
-              in building elegant, scalable web applications with Laravel and MySQL — from
-              database schema to pixel-perfect interfaces.
+              in building elegant, scalable web applications with Laravel and MySQL, and
+              modern PWAs with React and Vite — from database schema to pixel-perfect interfaces.
             </p>
             <p>
               I designed and built the <strong>ATMS — Alumni Tracing Management System</strong>{' '}
@@ -48,10 +48,15 @@ export default function About() {
               </a>
               , powered by Laravel, Laravel Mix and MySQL (managed through phpMyAdmin).
             </p>
+            <p>
+              In 2026 I expanded into React, Vite and PWAs — building the OCC Duty Log OJT
+              Tracker with Google sign-in, a client-side QR Code Builder, and several personal
+              portfolio sites (including this one), each shipped and deployed on Vercel.
+            </p>
             <ul className="about-list">
               <li><strong>Location:</strong> Brgy. Iponan Zone 1C Kinasanghan, CDO City, Misamis Oriental, Philippines</li>
               <li><strong>Languages:</strong> English, Filipino, Bisaya</li>
-              <li><strong>Focus:</strong> Laravel, MySQL, Laravel Mix, Web Apps</li>
+              <li><strong>Focus:</strong> Laravel, MySQL, React, Vite, PWA, Web & Portfolio Apps</li>
             </ul>
           </div>
         </div>

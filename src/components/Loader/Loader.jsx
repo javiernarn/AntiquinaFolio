@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-// Shows the branded loading screen for a few seconds, then fades out.
+// Shows the branded loading screen briefly, then fades out.
 // Runs once on mount (e.g. a hard refresh on "/"), and again any time
 // `trigger` changes (e.g. clicking the "Jonee.dev" logo).
 export default function Loader({ trigger = 0 }) {
@@ -12,8 +12,8 @@ export default function Loader({ trigger = 0 }) {
     setVisible(true);
     setFading(false);
 
-    const fadeTimer = setTimeout(() => setFading(true), 7000);
-    const hideTimer = setTimeout(() => setVisible(false), 7500); // matches CSS transition
+    const fadeTimer = setTimeout(() => setFading(true), 900);
+    const hideTimer = setTimeout(() => setVisible(false), 1500); // matches CSS transition
 
     return () => {
       clearTimeout(fadeTimer);
@@ -24,7 +24,11 @@ export default function Loader({ trigger = 0 }) {
   if (!visible) return null;
 
   return (
-    <div className="loader" id="loader" style={{ opacity: fading ? 0 : 1 }}>
+    <div
+      className="loader"
+      id="loader"
+      style={{ opacity: fading ? 0 : 1, pointerEvents: fading ? 'none' : 'auto' }}
+    >
       <div className="loader-inner">
         <div className="loader-logo">JJRA</div>
         <div className="loader-bar"><span></span></div>
