@@ -51,11 +51,6 @@ export default function Modal({ project, onClose }) {
                     Live Demo
                   </a>
                 )}
-                {project.admin && (
-                  <a href={project.admin} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
-                    Admin Panel
-                  </a>
-                )}
               </div>
             </>
           )}

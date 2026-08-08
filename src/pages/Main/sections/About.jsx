@@ -41,17 +41,23 @@ export default function About() {
               modern PWAs with React and Vite — from database schema to pixel-perfect interfaces.
             </p>
             <p>
-              I designed and built the <strong>ATMS — Alumni Tracing Management System</strong>{' '}
+              For <strong>Opol Community College</strong>, I've designed and built three core
+              campus systems. The <strong>ATMS — Alumni Tracing Management System</strong> is
               live at{' '}
               <a href="https://alumni.occph.com" target="_blank" rel="noopener noreferrer">
                 alumni.occph.com
               </a>
-              , powered by Laravel, Laravel Mix and MySQL (managed through phpMyAdmin).
+              , powered by Laravel, Laravel Mix and MySQL (managed through phpMyAdmin). The{' '}
+              <strong>OCC Duty Log — OJT Tracker</strong> is a Google sign-in PWA that logs
+              trainees' daily time-in/out in real time. And <strong>SCLF — Student Campus Lost &amp; Found</strong>{' '}
+              is a Laravel + React system with role-based access for students, security officers
+              and admins, automatic lost-found matching, and QR-verified item release.
             </p>
             <p>
-              In 2026 I expanded into React, Vite and PWAs — building the OCC Duty Log OJT
-              Tracker with Google sign-in, a client-side QR Code Builder, and several personal
-              portfolio sites (including this one), each shipped and deployed on Vercel.
+              Beyond OCC, I've expanded further into React, Vite and PWAs — building a
+              client-side QR Code Builder, a Firebase-backed interactive letter app with its own
+              admin dashboard, and several personal portfolio sites (including this one), each
+              shipped and deployed on Vercel.
             </p>
             <ul className="about-list">
               <li><strong>Location:</strong> Brgy. Iponan Zone 1C Kinasanghan, CDO City, Misamis Oriental, Philippines</li>

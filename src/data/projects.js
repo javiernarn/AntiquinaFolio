@@ -85,7 +85,6 @@ export const projects = [
     tech: ['JAVASCRIPT', 'HTML', 'CSS'],
     github: 'https://github.com/javiernarn/AntiquinaLetterAPP',
     live: 'https://antiquina-letter-app.vercel.app',
-    admin: 'https://antiquina-letter-app.vercel.app/admin',
     img: {
       light: '/images/letter-app.png',
       dark: '/images/letter-app.png',
@@ -93,6 +92,19 @@ export const projects = [
   },
   {
     id: 8,
+    title: 'For Jessa Mae — Admin Dashboard',
+    cat: 'web',
+    desc: 'Private, Google-auth-gated console behind "For Jessa Mae" — sign in with an allow-listed Google account to write and publish letters, build the yes/no question flow, and read back her responses in real time, while her public link stays sign-in-free.',
+    tech: ['REACT', 'FIREBASE', 'FIRESTORE', 'GOOGLE AUTH', 'VITE'],
+    github: 'https://github.com/javiernarn/AntiquinaLetterAPP',
+    live: 'https://antiquina-letter-app.vercel.app/admin',
+    img: {
+      light: '/images/letter-admin.png',
+      dark: '/images/letter-admin.png',
+    },
+  },
+  {
+    id: 9,
     title: 'SCLF — Student Campus Lost & Found',
     cat: 'web',
     desc: 'Campus-wide Lost & Found system built for Opol Community College — students report lost items and get auto-matched against found items, Security Officers log found items, scan QR release slips, and manage inventory/storage, and Admins oversee users, roles, and audit logs across campuses.',

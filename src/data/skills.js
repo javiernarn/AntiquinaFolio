@@ -5,6 +5,7 @@ export const skillGroups = [
       { label: 'HTML / CSS', pct: 95 },
       { label: 'JavaScript', pct: 93 },
       { label: 'React / Vite', pct: 88 },
+      { label: 'Tailwind CSS', pct: 84 },
       { label: 'Blade Templating', pct: 85 },
     ],
   },
@@ -14,6 +15,7 @@ export const skillGroups = [
       { label: 'PHP', pct: 90 },
       { label: 'Laravel', pct: 87 },
       { label: 'REST APIs / Google Auth', pct: 82 },
+      { label: 'Firebase / Firestore', pct: 78 },
       { label: 'Node.js', pct: 60 },
     ],
   },
@@ -21,6 +23,7 @@ export const skillGroups = [
     title: 'Database',
     items: [
       { label: 'MySQL', pct: 92 },
+      { label: 'SQLite', pct: 80 },
       { label: 'phpMyAdmin', pct: 90 },
       { label: 'Eloquent ORM', pct: 80 },
     ],
@@ -38,7 +41,7 @@ export const skillGroups = [
 
 export const stats = [
   { count: 1, label: 'Years Experience' },
-  { count: 7, label: 'Projects Completed' },
-  { count: 12, label: 'Technologies' },
+  { count: 9, label: 'Projects Completed' },
+  { count: 17, label: 'Technologies' },
   { count: 5, label: 'Happy Clients' },
 ];

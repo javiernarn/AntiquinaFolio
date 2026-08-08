@@ -1,5 +1,10 @@
 export const timeline = [
   {
+    date: '2026 — Present',
+    title: 'Full-Stack Systems Developer · SCLF',
+    desc: 'Built a role-based campus system for Opol Community College on Laravel 12 + React — student/security/admin roles via Spatie permissions, automatic lost-found matching, QR-based item release, push notifications, audit logs, and multi-campus support.',
+  },
+  {
     date: '2025 — Present',
     title: 'Lead Developer · ATMS (alumni.occph.com)',
     desc: 'Designed and developed the Alumni Tracing Management System using Laravel, Laravel Mix, MySQL, and phpMyAdmin. Implemented authentication, alumni management, surveys, reports, and deployment.',
@@ -7,7 +12,7 @@ export const timeline = [
   {
     date: '2026 — Present',
     title: 'React & Vite Project Builder',
-    desc: 'Expanded into modern frontend tooling with React, Vite, and PWAs — shipping the OCC Duty Log OJT Tracker with Google Auth, a client-side QR Code Builder, and multiple personal portfolio sites (this one included) with light/dark theming and deployment on Vercel.',
+    desc: 'Expanded into modern frontend tooling with React, Vite, and PWAs — shipping the OCC Duty Log OJT Tracker with Google Auth, a client-side QR Code Builder, a Firebase-backed interactive letter app with its own admin dashboard, and multiple personal portfolio sites (this one included) with light/dark theming and deployment on Vercel.',
   },
   {
     date: '2023 — 2024',
