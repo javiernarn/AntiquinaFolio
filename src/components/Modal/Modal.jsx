@@ -46,9 +46,16 @@ export default function Modal({ project, onClose }) {
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                   View on GitHub
                 </a>
-                <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                  Live Demo
-                </a>
+                {project.live && (
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                    Live Demo
+                  </a>
+                )}
+                {project.admin && (
+                  <a href={project.admin} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                    Admin Panel
+                  </a>
+                )}
               </div>
             </>
           )}

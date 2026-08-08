@@ -85,9 +85,22 @@ export const projects = [
     tech: ['JAVASCRIPT', 'HTML', 'CSS'],
     github: 'https://github.com/javiernarn/AntiquinaLetterAPP',
     live: 'https://antiquina-letter-app.vercel.app',
+    admin: 'https://antiquina-letter-app.vercel.app/admin',
     img: {
       light: '/images/letter-app.png',
       dark: '/images/letter-app.png',
+    },
+  },
+  {
+    id: 8,
+    title: 'SCLF — Student Campus Lost & Found',
+    cat: 'web',
+    desc: 'Campus-wide Lost & Found system built for Opol Community College — students report lost items and get auto-matched against found items, Security Officers log found items, scan QR release slips, and manage inventory/storage, and Admins oversee users, roles, and audit logs across campuses.',
+    tech: ['LARAVEL', 'PHP', 'REACT', 'VITE', 'TAILWIND', 'SQLITE', 'PWA'],
+    github: 'https://github.com/javiernarn/sclfAPP',
+    img: {
+      light: '/images/sclf-light.png',
+      dark: '/images/sclf-dark.png',
     },
   },
 ];

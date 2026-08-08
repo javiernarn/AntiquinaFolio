@@ -70,7 +70,8 @@ function ProjectCard({ project, onDetails }) {
         <div className="tech">{project.tech.map(t => <span key={t}>{t}</span>)}</div>
         <div className="project-actions">
           <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href={project.live} target="_blank" rel="noopener noreferrer">Live Demo</a>
+          {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer">Live Demo</a>}
+          {project.admin && <a href={project.admin} target="_blank" rel="noopener noreferrer">Admin</a>}
           <button onClick={() => onDetails(project)}>Details</button>
         </div>
       </div>
