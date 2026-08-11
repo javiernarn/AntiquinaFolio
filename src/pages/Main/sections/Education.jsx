@@ -1,11 +1,13 @@
+import * as Icons from 'lucide-react';
 import { useReveal } from '../../../hooks/useReveal';
 import { education } from '../../../data/experience';
 
 function EduCard({ logo, school, degree, meta, desc }) {
   const [ref, revealed] = useReveal();
+  const Icon = Icons[logo] || Icons.GraduationCap;
   return (
     <div className={`edu reveal${revealed ? ' in' : ''}`} ref={ref}>
-      <div className="edu-logo">{logo}</div>
+      <div className="edu-logo"><Icon size={22} strokeWidth={2} /></div>
       <h3>{school}</h3>
       <p className="edu-degree">{degree}</p>
       <p className="edu-meta">{meta}</p>

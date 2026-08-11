@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Search } from 'lucide-react';
 import { useReveal } from '../../../hooks/useReveal';
 import { projects } from '../../../data/projects';
 import { useDataTheme } from '../../../hooks/useDataTheme';
@@ -115,10 +116,7 @@ export default function Projects({ onOpenProject }) {
             ))}
           </div>
           <div className="search">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="11" cy="11" r="8" />
-              <path d="M21 21l-4.35-4.35" />
-            </svg>
+            <Search size={18} strokeWidth={2} />
             <input
               id="projectSearch"
               type="text"

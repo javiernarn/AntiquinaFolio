@@ -28,14 +28,14 @@ export const timeline = [
 
 export const education = [
   {
-    logo: '🎓',
+    logo: 'GraduationCap',
     school: 'Opol Community College',
     degree: 'Bachelor of Science and Information Technology',
     meta: 'Misamis Oriental, Philippines',
     desc: 'Focused on web development, databases, and app development.',
   },
   {
-    logo: '📚',
+    logo: 'BookOpen',
     school: 'Self-Taught',
     degree: 'Laravel, MySQL & Modern Web Development',
     meta: 'Continuous learning',

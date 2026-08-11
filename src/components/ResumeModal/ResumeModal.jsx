@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Download } from 'lucide-react';
 import '../../resume-modal.css';
 
 // Simple preview modal for the resume: shows the image full-size,
@@ -36,9 +37,7 @@ export default function ResumeModal({ open, onClose }) {
             download="Jonee-John-Antiquina-Resume.png"
             className="btn btn-primary"
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-            </svg>
+            <Download size={18} strokeWidth={2} />
             Download Resume
           </a>
         </div>

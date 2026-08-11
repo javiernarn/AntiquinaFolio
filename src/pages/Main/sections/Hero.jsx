@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { ArrowRight, Download, Cpu, Target, Database, Zap } from 'lucide-react';
 import { useTypedText } from '../../../hooks/useTypedText';
 import { useReveal } from '../../../hooks/useReveal';
 import ResumeModal from '../../../components/ResumeModal/ResumeModal';
@@ -46,14 +47,10 @@ export default function Hero() {
           <div className="hero-cta">
             <a href="#projects" className="btn btn-primary">
               View Projects
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
+              <ArrowRight size={18} strokeWidth={2} />
             </a>
             <button type="button" className="btn btn-ghost" onClick={() => setResumeOpen(true)}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-              </svg>
+              <Download size={18} strokeWidth={2} />
               View Resume
             </button>
             <a href="#contact" className="btn btn-ghost">Contact Me</a>
@@ -83,10 +80,10 @@ export default function Hero() {
             <div className="profile-img">
               <img src="/images/propic.png" alt="Jonee John Rivera Antiquina" />
             </div>
-            <div className="floating-tag tag-1">🐘 PHP</div>
-            <div className="floating-tag tag-2">🎯 Laravel</div>
-            <div className="floating-tag tag-3">🛢️ phpMyAdmin</div>
-            <div className="floating-tag tag-4">⚡ Laravel Mix</div>
+            <div className="floating-tag tag-1"><Cpu size={14} strokeWidth={2} /> PHP</div>
+            <div className="floating-tag tag-2"><Target size={14} strokeWidth={2} /> Laravel</div>
+            <div className="floating-tag tag-3"><Database size={14} strokeWidth={2} /> phpMyAdmin</div>
+            <div className="floating-tag tag-4"><Zap size={14} strokeWidth={2} /> Laravel Mix</div>
           </div>
         </div>
       </div>

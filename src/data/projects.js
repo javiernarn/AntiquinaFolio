@@ -115,4 +115,30 @@ export const projects = [
       dark: '/images/sclf-dark.png',
     },
   },
+  {
+    id: 10,
+    title: 'AbreaFolio — Portfolio',
+    cat: 'ui',
+    desc: 'Personal portfolio for JB Boy M. Abrea, project manager and data analyst — a bold, cosmic-themed React site with light/dark theming showcasing the ATMS capstone work, skills, experience, and projects.',
+    tech: ['REACT', 'HTML', 'CSS', 'JS', 'VITE', 'LUCIDE'],
+    github: 'https://github.com/javiernarn/AbreaFolio',
+    live: 'https://abrea-folio.vercel.app',
+    img: {
+      light: '/images/abrea-folio-light.png',
+      dark: '/images/abrea-folio-dark.png',
+    },
+  },
+  {
+    id: 11,
+    title: 'PadereFolio — Portfolio',
+    cat: 'ui',
+    desc: 'Personal portfolio for Shandy S. Padere, pastry chef and custom cake artist — a warm, bakery-themed React site with light/dark theming showcasing skills, certifications, and featured cake collections.',
+    tech: ['REACT', 'HTML', 'CSS', 'JS', 'VITE', 'LUCIDE'],
+    github: 'https://github.com/javiernarn/PadereFolio',
+    live: 'https://padere-folio.vercel.app',
+    img: {
+      light: '/images/padere-folio-light.png',
+      dark: '/images/padere-folio-dark.png',
+    },
+  },
 ];

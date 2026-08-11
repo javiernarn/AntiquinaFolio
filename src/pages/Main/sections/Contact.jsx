@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Mail, Phone, MapPin, Globe, Send } from 'lucide-react';
 import { useReveal } from '../../../hooks/useReveal';
 
 const FIELDS = [
@@ -52,28 +53,28 @@ export default function Contact() {
         <div className="contact-grid">
           <div className={`contact-info reveal${infoIn ? ' in' : ''}`} ref={infoRef}>
             <div className="ci">
-              <div className="ci-icon">✉️</div>
+              <div className="ci-icon"><Mail size={20} strokeWidth={2} /></div>
               <div>
                 <div className="ci-label">Email</div>
                 <div><a href="mailto:occ.antiquina.joneejohn@gmail.com">occ.antiquina.joneejohn@gmail.com</a></div>
               </div>
             </div>
             <div className="ci">
-              <div className="ci-icon">📞</div>
+              <div className="ci-icon"><Phone size={20} strokeWidth={2} /></div>
               <div>
                 <div className="ci-label">Phone</div>
                 <div><a href="tel:+639496600923">+63 949 660 0923</a></div>
               </div>
             </div>
             <div className="ci">
-              <div className="ci-icon">📍</div>
+              <div className="ci-icon"><MapPin size={20} strokeWidth={2} /></div>
               <div>
                 <div className="ci-label">Location</div>
                 <div>Brgy. Iponan Zone 1C Kinasanghan, CDO City, Misamis Oriental, Philippines</div>
               </div>
             </div>
             <div className="ci">
-              <div className="ci-icon">🌐</div>
+              <div className="ci-icon"><Globe size={20} strokeWidth={2} /></div>
               <div>
                 <div className="ci-label">ATMS System</div>
                 <div><a href="https://alumni.occph.com" target="_blank" rel="noopener noreferrer">alumni.occph.com</a></div>
@@ -107,9 +108,7 @@ export default function Contact() {
             </div>
             <button className="btn btn-primary" type="submit">
               Send Message
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-              </svg>
+              <Send size={18} strokeWidth={2} />
             </button>
             <div className={`form-success${showSuccess ? ' show' : ''}`} id="formSuccess">
               ✓ Message sent — I'll get back within 24 hours.

@@ -1,11 +1,13 @@
+import * as Icons from 'lucide-react';
 import { useReveal } from '../../../hooks/useReveal';
 import { services } from '../../../data/services';
 
 function ServiceCard({ icon, title, desc }) {
   const [ref, revealed] = useReveal();
+  const Icon = Icons[icon] || Icons.Sparkles;
   return (
     <article className={`service reveal${revealed ? ' in' : ''}`} ref={ref}>
-      <div className="service-icon">{icon}</div>
+      <div className="service-icon"><Icon size={22} strokeWidth={2} /></div>
       <h3>{title}</h3>
       <p>{desc}</p>
     </article>
