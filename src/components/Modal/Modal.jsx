@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 import { useDataTheme } from '../../hooks/useDataTheme';
+import { showToast } from '../Toast/Toast';
+
+const PRIVATE_LIVE_MESSAGE = "This portfolio is private — the client asked that the live link not be shared, so visiting it isn't available.";
 
 export default function Modal({ project, onClose }) {
   const open = Boolean(project);
@@ -46,7 +49,16 @@ export default function Modal({ project, onClose }) {
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                   View on GitHub
                 </a>
-                {project.live && (
+                {project.livePrivate && (
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={() => showToast(PRIVATE_LIVE_MESSAGE)}
+                  >
+                    Live Demo
+                  </button>
+                )}
+                {!project.livePrivate && project.live && (
                   <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                     Live Demo
                   </a>

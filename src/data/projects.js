@@ -5,6 +5,7 @@ export const projects = [
     cat: 'web',
     desc: 'Real-time OJT duty log and hours tracker for Opol Community College trainees — sign in with Google, log daily time-in/out, and keep every entry saved securely on-device.',
     tech: ['REACT', 'VITE', 'PWA', 'GOOGLE AUTH', 'JAVASCRIPT'],
+    client: 'Opol Community College',
     github: 'https://github.com/javiernarn/AntiquinaOTA',
     live: 'https://antiquina-ota-dxxj.vercel.app',
     img: {
@@ -18,6 +19,7 @@ export const projects = [
     cat: 'web',
     desc: 'Official Alumni Tracing Management System (ATMS) of Opol Community College — register as an alumnus, browse job opportunities, receive announcements, and stay connected with the OCC Alumni Association.',
     tech: ['LARAVEL', 'PHP', 'MYSQL', 'BLADE', 'LARAVEL MIX'],
+    client: 'Opol Community College',
     github: 'https://github.com/javiernarn/AlumniAPP',
     live: 'https://occ-alumni.online',
     img: {
@@ -44,6 +46,7 @@ export const projects = [
     cat: 'ui',
     desc: 'Personal portfolio for Jon Maurice Sernande — a dark, editorial-style site blending minimalist design with rich polaroid-inspired texture to showcase UI/UX, web, and game dev work.',
     tech: ['REACT', 'HTML', 'CSS', 'JS', 'VITE'],
+    client: 'Jon Maurice Sernande',
     github: 'https://github.com/javiernarn/SernandeFolio',
     live: 'https://sernande-folio.vercel.app',
     img: {
@@ -70,6 +73,7 @@ export const projects = [
     cat: 'ui',
     desc: 'Personal portfolio for Jessa Mae Alfeche, BSIT graduate — a soft, animated site with full light/dark theme support showcasing education, skills, experience, and projects.',
     tech: ['REACT', 'HTML', 'CSS', 'JS', 'VITE'],
+    client: 'Jessa Mae Alfeche',
     github: 'https://github.com/javiernarn/AlfecheFolio',
     live: 'https://alfeche-folio.vercel.app',
     img: {
@@ -83,6 +87,7 @@ export const projects = [
     cat: 'web',
     desc: 'An interactive, heartfelt digital letter experience — a cozy scrapbook-style page that reveals a personal message piece by piece as it opens.',
     tech: ['JAVASCRIPT', 'HTML', 'CSS'],
+    client: 'Jessa Mae Alfeche',
     github: 'https://github.com/javiernarn/AntiquinaLetterAPP',
     live: 'https://antiquina-letter-app.vercel.app',
     img: {
@@ -96,6 +101,7 @@ export const projects = [
     cat: 'web',
     desc: 'Private, Google-auth-gated console behind "For Jessa Mae" — sign in with an allow-listed Google account to write and publish letters, build the yes/no question flow, and read back her responses in real time, while her public link stays sign-in-free.',
     tech: ['REACT', 'FIREBASE', 'FIRESTORE', 'GOOGLE AUTH', 'VITE'],
+    client: 'Jessa Mae Alfeche',
     github: 'https://github.com/javiernarn/AntiquinaLetterAPP',
     live: 'https://antiquina-letter-app.vercel.app/admin',
     img: {
@@ -109,6 +115,7 @@ export const projects = [
     cat: 'web',
     desc: 'Campus-wide Lost & Found system built for Opol Community College — students report lost items and get auto-matched against found items, Security Officers log found items, scan QR release slips, and manage inventory/storage, and Admins oversee users, roles, and audit logs across campuses.',
     tech: ['LARAVEL', 'PHP', 'REACT', 'VITE', 'TAILWIND', 'SQLITE', 'PWA'],
+    client: 'Opol Community College',
     github: 'https://github.com/javiernarn/sclfAPP',
     img: {
       light: '/images/sclf-light.png',
@@ -121,8 +128,11 @@ export const projects = [
     cat: 'ui',
     desc: 'Personal portfolio for JB Boy M. Abrea, project manager and data analyst — a bold, cosmic-themed React site with light/dark theming showcasing the ATMS capstone work, skills, experience, and projects.',
     tech: ['REACT', 'HTML', 'CSS', 'JS', 'VITE', 'LUCIDE'],
+    client: 'JB Boy M. Abrea',
     github: 'https://github.com/javiernarn/AbreaFolio',
-    live: 'https://abrea-folio.vercel.app',
+    // Live link kept private at the client's request — see `livePrivate` below.
+    // live: 'https://abrea-folio.vercel.app',
+    livePrivate: true,
     img: {
       light: '/images/abrea-folio-light.png',
       dark: '/images/abrea-folio-dark.png',
@@ -134,8 +144,11 @@ export const projects = [
     cat: 'ui',
     desc: 'Personal portfolio for Shandy S. Padere, pastry chef and custom cake artist — a warm, bakery-themed React site with light/dark theming showcasing skills, certifications, and featured cake collections.',
     tech: ['REACT', 'HTML', 'CSS', 'JS', 'VITE', 'LUCIDE'],
+    client: 'Shandy S. Padere',
     github: 'https://github.com/javiernarn/PadereFolio',
-    live: 'https://padere-folio.vercel.app',
+    // Live link kept private at the client's request — see `livePrivate` below.
+    // live: 'https://padere-folio.vercel.app',
+    livePrivate: true,
     img: {
       light: '/images/padere-folio-light.png',
       dark: '/images/padere-folio-dark.png',

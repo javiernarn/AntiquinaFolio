@@ -3,6 +3,7 @@ import { Search } from 'lucide-react';
 import { useReveal } from '../../../hooks/useReveal';
 import { projects } from '../../../data/projects';
 import { useDataTheme } from '../../../hooks/useDataTheme';
+import { showToast } from '../../../components/Toast/Toast';
 
 const FILTERS = ['all', 'web', 'app', 'ai', 'ui'];
 
@@ -11,15 +12,24 @@ const STATUS_LABEL = {
   checking: 'Checking',
   online: 'Online',
   offline: 'Offline',
+  private: 'Private',
 };
+
+const PRIVATE_LIVE_MESSAGE = "This portfolio is private — the client asked that the live link not be shared, so visiting it isn't available.";
 
 // Pings a project's live domain and reports whether it's reachable.
 // No live domain -> "local". Domain set but unreachable -> "offline". Reachable -> "online".
-function useLiveStatus(url) {
-  const hasLive = !!url && url !== '#';
-  const [status, setStatus] = useState(hasLive ? 'checking' : 'local');
+// A project marked `livePrivate` never pings anything — it's always "private".
+function useLiveStatus(project) {
+  const { live, livePrivate } = project;
+  const hasLive = !!live && live !== '#';
+  const [status, setStatus] = useState(livePrivate ? 'private' : hasLive ? 'checking' : 'local');
 
   useEffect(() => {
+    if (livePrivate) {
+      setStatus('private');
+      return;
+    }
     if (!hasLive) {
       setStatus('local');
       return;
@@ -31,7 +41,7 @@ function useLiveStatus(url) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 6000);
 
-    fetch(url, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
+    fetch(live, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
       .then(() => {
         if (!cancelled) setStatus('online');
       })
@@ -45,7 +55,7 @@ function useLiveStatus(url) {
       controller.abort();
       clearTimeout(timeoutId);
     };
-  }, [url, hasLive]);
+  }, [live, hasLive, livePrivate]);
 
   return status;
 }
@@ -54,7 +64,7 @@ function ProjectCard({ project, onDetails }) {
   const [ref, revealed] = useReveal();
   const theme = useDataTheme();
   const src = project.img?.[theme] || project.img?.dark;
-  const status = useLiveStatus(project.live);
+  const status = useLiveStatus(project);
 
   return (
     <article className={`project reveal${revealed ? ' in' : ''}`} ref={ref} data-cat={project.cat}>
@@ -71,7 +81,12 @@ function ProjectCard({ project, onDetails }) {
         <div className="tech">{project.tech.map(t => <span key={t}>{t}</span>)}</div>
         <div className="project-actions">
           <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-          {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer">Live Demo</a>}
+          {project.livePrivate && (
+            <button type="button" onClick={() => showToast(PRIVATE_LIVE_MESSAGE)}>Live Demo</button>
+          )}
+          {!project.livePrivate && project.live && (
+            <a href={project.live} target="_blank" rel="noopener noreferrer">Live Demo</a>
+          )}
           <button onClick={() => onDetails(project)}>Details</button>
         </div>
       </div>

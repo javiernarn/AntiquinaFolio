@@ -5,6 +5,7 @@ import BackgroundFX from '../../components/BackgroundFX/BackgroundFX';
 import Navbar from '../../components/Navbar/Navbar';
 import BackToTop from '../../components/BackToTop/BackToTop';
 import Modal from '../../components/Modal/Modal';
+import ToastHost from '../../components/Toast/Toast';
 import Footer from '../../components/Footer/Footer';
 import { useScrollState } from '../../hooks/useScrollState';
 import { useSectionSync } from '../../hooks/useSectionSync';
@@ -66,6 +67,7 @@ export default function MainPage() {
       <Footer />
       <BackToTop show={showBackTop} />
       <Modal project={activeProject} onClose={() => setActiveProject(null)} />
+      <ToastHost />
     </>
   );
 }
