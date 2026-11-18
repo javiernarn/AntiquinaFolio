@@ -46,9 +46,11 @@ export default function Modal({ project, onClose }) {
                 scalability, and maintainability in mind.
               </p>
               <div className="project-actions" style={{ marginTop: 18 }}>
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                   View on GitHub
                 </a>
+                )}
                 {project.livePrivate && (
                   <button
                     type="button"

@@ -80,7 +80,7 @@ function ProjectCard({ project, onDetails }) {
         <p>{project.desc}</p>
         <div className="tech">{project.tech.map(t => <span key={t}>{t}</span>)}</div>
         <div className="project-actions">
-          <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+          {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>}
           {project.livePrivate && (
             <button type="button" onClick={() => showToast(PRIVATE_LIVE_MESSAGE)}>Live Demo</button>
           )}

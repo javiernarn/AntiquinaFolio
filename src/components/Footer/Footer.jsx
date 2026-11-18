@@ -26,7 +26,7 @@ export default function Footer() {
           <ul>
             <li><a href="https://github.com/javiernarn" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://www.facebook.com/EphemeralKun/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://alumni.occph.com" target="_blank" rel="noopener noreferrer">ATMS System</a></li>
+            <li><a href="https://alumniappv2.ethiodeploy.app" target="_blank" rel="noopener noreferrer">ATMS System</a></li>
             <li><a href="mailto:occ.antiquina.joneejohn@gmail.com">Email</a></li>
           </ul>
         </div>

@@ -77,7 +77,7 @@ export default function Contact() {
               <div className="ci-icon"><Globe size={20} strokeWidth={2} /></div>
               <div>
                 <div className="ci-label">ATMS System</div>
-                <div><a href="https://alumni.occph.com" target="_blank" rel="noopener noreferrer">alumni.occph.com</a></div>
+                <div><a href="https://alumniappv2.ethiodeploy.app" target="_blank" rel="noopener noreferrer">alumniappv2.ethiodeploy.app</a></div>
               </div>
             </div>
             <div className="ci-socials">

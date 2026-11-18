@@ -7,11 +7,11 @@ export const timeline = [
   {
     date: '2026 — Present',
     title: 'React & Vite Project Builder',
-    desc: 'Expanded into modern frontend tooling with React, Vite, and PWAs — shipping the OCC Duty Log OJT Tracker with Google Auth, a client-side QR Code Builder, a Firebase-backed interactive letter app with its own admin dashboard, and multiple personal portfolio sites (this one included) with light/dark theming and deployment on Vercel.',
+    desc: 'Expanded into modern frontend tooling with React, Vite, and PWAs — shipping the OCC Duty Log OJT Tracker with shift reminders and PDF duty reports, a client-side QR Code Builder, a Firebase-backed interactive letter app with its own admin dashboard, and multiple personal portfolio sites (this one included) with light/dark theming and deployment on Vercel.',
   },
   {
     date: '2025 — Present',
-    title: 'Lead Developer · ATMS (alumni.occph.com)',
+    title: 'Lead Developer · ATMS (alumniappv2.ethiodeploy.app)',
     desc: 'Designed and developed the Alumni Tracing Management System using Laravel, Laravel Mix, MySQL, and phpMyAdmin. Implemented authentication, alumni management, surveys, reports, and deployment.',
   },
   {

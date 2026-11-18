@@ -44,12 +44,12 @@ export default function About() {
               For <strong>Opol Community College</strong>, I've designed and built three core
               campus systems. The <strong>ATMS — Alumni Tracing Management System</strong> is
               live at{' '}
-              <a href="https://alumni.occph.com" target="_blank" rel="noopener noreferrer">
-                alumni.occph.com
+              <a href="https://alumniappv2.ethiodeploy.app" target="_blank" rel="noopener noreferrer">
+                alumniappv2.ethiodeploy.app
               </a>
               , powered by Laravel, Laravel Mix and MySQL (managed through phpMyAdmin). The{' '}
-              <strong>OCC Duty Log — OJT Tracker</strong> is a Google sign-in PWA that logs
-              trainees' daily time-in/out in real time. And <strong>SCLF — Student Campus Lost &amp; Found</strong>{' '}
+              <strong>OCC Duty Log — OJT Tracker</strong> is a phone-first PWA that logs
+              trainees' daily time-in/out in real time, with shift reminders and PDF duty reports. And <strong>SCLF — Smart Campus Lost &amp; Found</strong>{' '}
               is a Laravel + React system with role-based access for students, security officers
               and admins, automatic lost-found matching, and QR-verified item release.
             </p>

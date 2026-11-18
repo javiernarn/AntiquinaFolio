@@ -42,7 +42,7 @@ export default function Hero() {
           <p className="hero-sub">
             Programmer, designer and developer (frontend and backend) from CDO City, Philippines.
             I build scalable web applications with Laravel, MySQL and modern frontends — including
-            the ATMS Alumni Tracing Management System at alumni.occph.com.
+            the ATMS Alumni Tracing Management System at alumniappv2.ethiodeploy.app.
           </p>
           <div className="hero-cta">
             <a href="#projects" className="btn btn-primary">
