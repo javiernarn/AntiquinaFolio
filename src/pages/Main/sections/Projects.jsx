@@ -40,28 +40,51 @@ function useLiveStatus(project) {
     let timeoutId = null;
     setStatus('checking');
 
-    // Free/sleeping hosts can take a while to wake up, so give each attempt
-    // 15s and retry once before declaring the site offline.
+    // 1) Ask our own serverless endpoint (reliable, no CORS/CORP issues).
+    // 2) If that says offline or isn't available (e.g. local dev), fall back
+    //    to a direct no-cors browser ping before declaring the site offline.
+    // Free/sleeping hosts can be slow to wake, so the fallback gets 15s x 2.
     const ATTEMPTS = 2;
     const TIMEOUT_MS = 15000;
 
-    function ping(attempt) {
-      controller = new AbortController();
-      timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
+    function directPing(attempt) {
+      const c = new AbortController();
+      const t = setTimeout(() => c.abort(), TIMEOUT_MS);
+      controller = c;
+      timeoutId = t;
 
-      fetch(live, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
+      fetch(live, { mode: 'no-cors', cache: 'no-store', signal: c.signal })
         .then(() => {
           if (!cancelled) setStatus('online');
         })
         .catch(() => {
           if (cancelled) return;
-          if (attempt < ATTEMPTS) ping(attempt + 1);
+          if (attempt < ATTEMPTS) directPing(attempt + 1);
           else setStatus('offline');
         })
-        .finally(() => clearTimeout(timeoutId));
+        .finally(() => clearTimeout(t));
     }
 
-    ping(1);
+    function ping() {
+      const c = new AbortController();
+      const t = setTimeout(() => c.abort(), TIMEOUT_MS);
+      controller = c;
+      timeoutId = t;
+
+      fetch(`/api/ping?url=${encodeURIComponent(live)}`, { signal: c.signal })
+        .then(r => (r.ok ? r.json() : Promise.reject(new Error('api'))))
+        .then(data => {
+          if (cancelled) return;
+          if (data.online) setStatus('online');
+          else directPing(1);
+        })
+        .catch(() => {
+          if (!cancelled) directPing(1);
+        })
+        .finally(() => clearTimeout(t));
+    }
+
+    ping();
 
     return () => {
       cancelled = true;

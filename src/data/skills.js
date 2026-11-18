@@ -25,6 +25,7 @@ const SKILL_DEFINITIONS = [
       { label: 'HTML / CSS', match: (p) => techListOf(p).some((t) => /HTML|CSS/.test(t)) },
       { label: 'JavaScript', match: (p) => techListOf(p).some((t) => /JAVASCRIPT|^JS$|JSX/.test(t)) },
       { label: 'React / Vite', match: (p) => techListOf(p).some((t) => /REACT|VITE/.test(t)) },
+      { label: 'Ant Design / Lucide', match: (p) => techListOf(p).some((t) => /ANT DESIGN|LUCIDE/.test(t)) },
       { label: 'Tailwind CSS', match: (p) => techListOf(p).some((t) => /TAILWIND/.test(t)) },
       { label: 'Blade Templating', match: (p) => techListOf(p).some((t) => /BLADE/.test(t)) },
     ],
@@ -53,9 +54,27 @@ const SKILL_DEFINITIONS = [
     title: 'Tools',
     items: [
       { label: 'Git / GitHub', match: (p) => Boolean(p.github) },
-      { label: 'Vercel Deployment', match: (p) => Boolean(p.live && p.live.includes('vercel.app')) },
       { label: 'PWA / Service Workers', match: (p) => techListOf(p).some((t) => /\bPWA\b/.test(t)) },
+      { label: 'Web Push Notifications', match: (p) => techListOf(p).some((t) => /WEB PUSH/.test(t)) },
       { label: 'VS Code', match: () => true },
+    ],
+  },
+  {
+    title: 'Hosting & Cloud',
+    items: [
+      { label: 'Vercel Deployment', match: (p) => techListOf(p).some((t) => /VERCEL/.test(t)) || Boolean(p.live && p.live.includes('vercel.app')) },
+      { label: 'Ethiodeploy Hosting', match: (p) => techListOf(p).some((t) => /ETHIODEPLOY/.test(t)) || Boolean(p.live && p.live.includes('ethiodeploy.app')) },
+      { label: 'Pantheon Cloud Hosting', match: (p) => techListOf(p).some((t) => /PANTHEON/.test(t)) || Boolean(p.live && p.live.includes('pantheonsite.io')) },
+      { label: 'Cloud Computing', match: (p) => techListOf(p).some((t) => /CLOUD COMPUTING|PANTHEON/.test(t)) },
+    ],
+  },
+  {
+    title: 'CMS & Features',
+    items: [
+      { label: 'WordPress / Plugins', match: (p) => techListOf(p).some((t) => /WORDPRESS|WP PLUGIN/.test(t)) },
+      { label: 'QR Code Generation', match: (p) => techListOf(p).some((t) => /QR CODE/.test(t)) },
+      { label: 'Two-Factor Auth', match: (p) => techListOf(p).some((t) => /2FA/.test(t)) },
+      { label: 'Real-time Updates', match: (p) => techListOf(p).some((t) => /REAL-TIME|FIRESTORE/.test(t)) },
     ],
   },
 ];
