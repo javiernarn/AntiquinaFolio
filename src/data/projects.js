@@ -5,7 +5,6 @@ export const projects = [
     cat: 'ui',
     desc: 'Team portfolio for SalValAn — three graduating BSIT students (Jonee John Antiquina, Mariel Saldivar, Diane Valle) who joined forces for their Cloud Computing final project. A one-page, animated site organized around Build, Analyze, Document — with a team hero, About, Skills, Services, Projects, Experience, and a contact form that routes messages to each member. Packaged as a WordPress plugin with light/dark mode, a mobile tab bar, and an installable PWA, hosted in the cloud on Pantheon.',
     tech: ['CLOUD COMPUTING', 'WORDPRESS', 'PHP', 'JAVASCRIPT', 'CSS', 'PWA', 'PANTHEON'],
-    client: 'Cloud Computing Final Project (2026)',
     github: 'https://github.com/javiernarn/AntiquinaFolio',
     live: 'https://dev-sal-val-an.pantheonsite.io/',
     img: {

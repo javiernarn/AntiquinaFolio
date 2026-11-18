@@ -1,5 +1,10 @@
 export const timeline = [
   {
+    date: '2026',
+    title: 'Cloud Computing Final Project · SVA — SalValAn Cloud Portfolio',
+    desc: 'Led development and design on a three-person team with Mariel Saldivar (Project Analyst — requirements and process analysis) and Diane Valle (Technical Writer — research and system documentation). Built the one-page SalValAn site as a WordPress plugin with light/dark mode, a mobile tab bar, a per-member contact form, and an installable PWA, then deployed it to the cloud on Pantheon.',
+  },
+  {
     date: '2026 — Present',
     title: 'Full-Stack Systems Developer · SCLF',
     desc: 'Built a role-based campus system for Opol Community College on Laravel 12 + React — student/security/admin roles via Spatie permissions, automatic lost-found matching, QR-based item release, push notifications, audit logs, and multi-campus support.',

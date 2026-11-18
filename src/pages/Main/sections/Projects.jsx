@@ -36,23 +36,36 @@ function useLiveStatus(project) {
     }
 
     let cancelled = false;
+    let controller = null;
+    let timeoutId = null;
     setStatus('checking');
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 6000);
+    // Free/sleeping hosts can take a while to wake up, so give each attempt
+    // 15s and retry once before declaring the site offline.
+    const ATTEMPTS = 2;
+    const TIMEOUT_MS = 15000;
 
-    fetch(live, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
-      .then(() => {
-        if (!cancelled) setStatus('online');
-      })
-      .catch(() => {
-        if (!cancelled) setStatus('offline');
-      })
-      .finally(() => clearTimeout(timeoutId));
+    function ping(attempt) {
+      controller = new AbortController();
+      timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
+
+      fetch(live, { mode: 'no-cors', cache: 'no-store', signal: controller.signal })
+        .then(() => {
+          if (!cancelled) setStatus('online');
+        })
+        .catch(() => {
+          if (cancelled) return;
+          if (attempt < ATTEMPTS) ping(attempt + 1);
+          else setStatus('offline');
+        })
+        .finally(() => clearTimeout(timeoutId));
+    }
+
+    ping(1);
 
     return () => {
       cancelled = true;
-      controller.abort();
+      if (controller) controller.abort();
       clearTimeout(timeoutId);
     };
   }, [live, hasLive, livePrivate]);
